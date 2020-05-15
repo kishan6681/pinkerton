@@ -225,7 +225,4 @@
     <None Include="Schema-Model\EA\Tables\T_USR_SERVICE_TYPE.sql" />
     <None Include="Schema-Model\Security\Schemas\EA.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Migrations\001_20200515-2234_mkomaravolu.sql" />
-  </ItemGroup>
 </Project>
