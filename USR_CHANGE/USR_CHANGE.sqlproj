@@ -228,4 +228,7 @@
   <ItemGroup>
     <None Include="Migrations\001_20200515-2257_mkomaravolu.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\002_20200515-2304_mkomaravolu.sql" />
+  </ItemGroup>
 </Project>
