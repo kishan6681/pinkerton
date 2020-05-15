@@ -13,7 +13,7 @@
     </RootPath>
     <RootNamespace>USR</RootNamespace>
     <AssemblyName>USR</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -22,6 +22,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,5 +58,47 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="EA\" />
+    <Folder Include="EA\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="EA\Tables\T_USR_OPERATION_MANAGER.sql" />
+    <Build Include="EA\Tables\L_CLIENT.sql" />
+    <Build Include="EA\Tables\L_CLIENT_REQUESTING_OFFICE.sql" />
+    <Build Include="EA\Tables\L_COUNTRY.sql" />
+    <Build Include="EA\Tables\L_MASTER_TYPE.sql" />
+    <Build Include="EA\Tables\L_MASTER_VALUE.sql" />
+    <Build Include="EA\Tables\L_REQUESTING_DIRECTOR_DEPARTMENT.sql" />
+    <Build Include="EA\Tables\L_REQUESTING_OFFICE.sql" />
+    <Build Include="EA\Tables\L_REQUESTING_REGION.sql" />
+    <Build Include="EA\Tables\L_SERVICE_TYPE.sql" />
+    <Build Include="EA\Tables\L_SERVICE_TYPE_CATEGORY.sql" />
+    <Build Include="EA\Tables\L_SERVICES.sql" />
+    <Build Include="EA\Tables\L_SUB_SERVICES.sql" />
+    <Build Include="EA\Tables\L_USR_STATUS.sql" />
+    <Build Include="EA\Tables\T_USR.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_CATEGORY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_CERTAINTY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_CHANNEL.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_RECIPENT.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_SEVERITY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_URGENCY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_WARNE_TYPE.sql" />
+    <Build Include="EA\Tables\T_USR_ATTACHMENTS.sql" />
+    <Build Include="EA\Tables\T_USR_AUTHOR.sql" />
+    <Build Include="EA\Tables\T_USR_HIST.sql" />
+    <Build Include="EA\Tables\T_USR_LOCATION.sql" />
+    <Build Include="EA\Tables\T_USR_PURPOSE.sql" />
+    <Build Include="EA\Tables\T_USR_RECIPIENTS.sql" />
+    <Build Include="EA\Tables\T_USR_SERVICE_TYPE.sql" />
+    <Build Include="EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
+    <Build Include="dbo\Functions\fn_diagramobjects.sql" />
+    <Build Include="Security\EA.sql" />
+    <Build Include="EA\Tables\L_STATE.sql" />
+    <Build Include="dbo\Stored Procedures\spGetChangeTracking.sql" />
   </ItemGroup>
 </Project>
