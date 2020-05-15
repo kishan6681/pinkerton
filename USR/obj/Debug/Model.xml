@@ -44,6 +44,487 @@
 				</Entry>
 			</Relationship>
 		</Element>
+		<Element Type="SqlTable" Name="[dbo].[__MigrationLog]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[migration_id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[script_checksum]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="64" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[script_filename]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[complete_dt]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[applied_by]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[deployed]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[tinyint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[version]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[package_version]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[release_version]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__MigrationLog].[sequence_no]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[__MigrationLog].[IX___MigrationLog_CompleteDt]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[complete_dt]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[__MigrationLog].[IX___MigrationLog_Version]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[version]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[__MigrationLog].[UX___MigrationLog_SequenceNo]">
+			<Property Name="IsUnique" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[sequence_no]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[__MigrationLogCurrent]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+			WITH currentMigration AS
+			(
+			  SELECT
+				 migration_id, script_checksum, script_filename, complete_dt, applied_by, deployed, ROW_NUMBER() OVER(PARTITION BY migration_id ORDER BY sequence_no DESC) AS RowNumber
+			  FROM [dbo].[__MigrationLog]
+			)
+			SELECT  migration_id, script_checksum, script_filename, complete_dt, applied_by, deployed
+			FROM currentMigration
+			WHERE RowNumber = 1]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[migration_id]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[migration_id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[script_checksum]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[script_checksum]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[script_filename]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[script_filename]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[complete_dt]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[complete_dt]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[applied_by]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[applied_by]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[deployed]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[deployed]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[migration_id]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[__MigrationLog].[migration_id]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[script_checksum]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[__MigrationLog].[script_checksum]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[script_filename]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[__MigrationLog].[script_filename]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[complete_dt]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[__MigrationLog].[complete_dt]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[applied_by]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[__MigrationLog].[applied_by]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[deployed]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[__MigrationLog].[deployed]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[__MigrationLogCurrent].[CTE1].[currentMigration].[RowNumber]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[migration_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[script_checksum]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[script_filename]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[complete_dt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[applied_by]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[deployed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[sequence_no]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="3" />
+				<Property Name="Length" Value="456" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;&#x9;CREATE VIEW [dbo].[__MigrationLogCurrent]&#xD;&#xA;&#x9;&#x9;&#x9;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[__SchemaSnapshot]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__SchemaSnapshot].[Snapshot]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varbinary]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[__SchemaSnapshot].[LastUpdateDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[__SchemaSnapshotDateDefault]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(sysdatetime())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[__SchemaSnapshot]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[__SchemaSnapshot].[LastUpdateDate]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF___MigrationLog_deployed]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((1))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[deployed]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="3" />
+		</Element>
 		<Element Type="SqlScalarFunction" Name="[dbo].[fn_diagramobjects]">
 			<Property Name="IsCaller" Value="False" />
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -154,6 +635,43 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK___MigrationLog]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[migration_id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[complete_dt]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[__MigrationLog].[script_checksum]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="4" />
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[spGetChangeTracking]">
 			<Property Name="BodyScript">
@@ -543,7 +1061,7 @@ END]]></Value>
 					<References Name="[EA].[L_CLIENT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_L_CLIENT_REQUESTING_OFFICE_L_REQUESTING_OFFICE]">
 			<Relationship Name="Columns">
@@ -566,7 +1084,7 @@ END]]></Value>
 					<References Name="[EA].[L_REQUESTING_OFFICE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_L_MASTER_VALUE_L_MASTER_TYPE]">
 			<Relationship Name="Columns">
@@ -589,7 +1107,7 @@ END]]></Value>
 					<References Name="[EA].[L_MASTER_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_L_REQUESTING_OFFICE_L_REQUESTING_REGION]">
 			<Relationship Name="Columns">
@@ -612,7 +1130,7 @@ END]]></Value>
 					<References Name="[EA].[L_REQUESTING_REGION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_L_SERVICE_TYPE_CATEGORY_L_SERVICE_TYPE]">
 			<Relationship Name="Columns">
@@ -635,7 +1153,7 @@ END]]></Value>
 					<References Name="[EA].[L_SERVICE_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_L_SUB_SERVICES_L_SERVICES]">
 			<Relationship Name="Columns">
@@ -658,7 +1176,7 @@ END]]></Value>
 					<References Name="[EA].[L_SERVICES]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_CATEGORY_T_USR]">
 			<Relationship Name="Columns">
@@ -681,7 +1199,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_CERTAINTY_T_USR]">
 			<Relationship Name="Columns">
@@ -704,7 +1222,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_CHANNEL_T_USR]">
 			<Relationship Name="Columns">
@@ -727,7 +1245,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_RECIPENT_T_USR]">
 			<Relationship Name="Columns">
@@ -750,7 +1268,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_SEVERITY_T_USR]">
 			<Relationship Name="Columns">
@@ -773,7 +1291,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_URGENCY_T_USR]">
 			<Relationship Name="Columns">
@@ -796,7 +1314,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ALERT_WARNE_TYPE_T_USR]">
 			<Relationship Name="Columns">
@@ -819,7 +1337,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_ATTACHMENTS_T_USR_ATTACHMENTS1]">
 			<Relationship Name="Columns">
@@ -842,7 +1360,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ATTACHMENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_AUTHOR_T_USR]">
 			<Relationship Name="Columns">
@@ -865,7 +1383,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_L_CLIENT]">
 			<Relationship Name="Columns">
@@ -888,7 +1406,7 @@ END]]></Value>
 					<References Name="[EA].[L_CLIENT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_LOCATION_L_COUNTRY]">
 			<Relationship Name="Columns">
@@ -911,7 +1429,7 @@ END]]></Value>
 					<References Name="[EA].[L_COUNTRY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_LOCATION_T_USR]">
 			<Relationship Name="Columns">
@@ -934,7 +1452,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_OPERATION_MANAGER_T_USR]">
 			<Relationship Name="Columns">
@@ -957,7 +1475,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="24" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_OPERATION_MANAGER_T_USR_RECIPIENTS]">
 			<Relationship Name="Columns">
@@ -980,7 +1498,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_RECIPIENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="25" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_PURPOSE_T_USR]">
 			<Relationship Name="Columns">
@@ -1003,7 +1521,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="26" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_RECIPIENTS_T_USR]">
 			<Relationship Name="Columns">
@@ -1026,7 +1544,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="24" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="27" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_SERVICE_TYPE_T_USR]">
 			<Relationship Name="Columns">
@@ -1049,7 +1567,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="25" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="28" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[EA].[FK_T_USR_T_USR_ATTACHMENTS]">
 			<Relationship Name="Columns">
@@ -1072,7 +1590,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ATTACHMENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="26" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="29" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_CLIENT]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1225,7 +1743,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="27" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="30" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_CLIENT_REQUESTING_OFFICE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1361,9 +1879,9 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="28" />
-			<AttachedAnnotation Disambiguator="3" />
-			<AttachedAnnotation Disambiguator="4" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="31" />
+			<AttachedAnnotation Disambiguator="6" />
+			<AttachedAnnotation Disambiguator="7" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_COUNTRY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1484,7 +2002,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="29" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="32" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_MASTER_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1621,7 +2139,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="30" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="33" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_MASTER_VALUE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1773,8 +2291,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="31" />
-			<AttachedAnnotation Disambiguator="5" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="34" />
+			<AttachedAnnotation Disambiguator="8" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_REQUESTING_DIRECTOR_DEPARTMENT]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1910,7 +2428,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="32" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="35" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_REQUESTING_OFFICE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2047,8 +2565,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="33" />
-			<AttachedAnnotation Disambiguator="6" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="36" />
+			<AttachedAnnotation Disambiguator="9" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_REQUESTING_REGION]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2169,7 +2687,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="34" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="37" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_SERVICE_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2290,7 +2808,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="35" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="38" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_SERVICE_TYPE_CATEGORY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2426,8 +2944,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="36" />
-			<AttachedAnnotation Disambiguator="7" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="39" />
+			<AttachedAnnotation Disambiguator="10" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_SERVICES]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2548,7 +3066,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="37" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="40" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_STATE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2669,7 +3187,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="38" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="41" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_SUB_SERVICES]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2805,8 +3323,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="39" />
-			<AttachedAnnotation Disambiguator="8" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="42" />
+			<AttachedAnnotation Disambiguator="11" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_USR_STATUS]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -2927,7 +3445,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="40" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="43" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_CLIENT]">
 			<Relationship Name="ColumnSpecifications">
@@ -2946,7 +3464,7 @@ END]]></Value>
 					<References Name="[EA].[L_CLIENT]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="27" />
+			<AttachedAnnotation Disambiguator="30" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_CLIENT_REQUESTING_OFFICE]">
 			<Relationship Name="ColumnSpecifications">
@@ -2965,7 +3483,7 @@ END]]></Value>
 					<References Name="[EA].[L_CLIENT_REQUESTING_OFFICE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="28" />
+			<AttachedAnnotation Disambiguator="31" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_COUNTRY]">
 			<Relationship Name="ColumnSpecifications">
@@ -2984,7 +3502,7 @@ END]]></Value>
 					<References Name="[EA].[L_COUNTRY]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="29" />
+			<AttachedAnnotation Disambiguator="32" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_MASTER_TYPE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3003,7 +3521,7 @@ END]]></Value>
 					<References Name="[EA].[L_MASTER_TYPE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="30" />
+			<AttachedAnnotation Disambiguator="33" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_MASTER_VALUE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3022,7 +3540,7 @@ END]]></Value>
 					<References Name="[EA].[L_MASTER_VALUE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="31" />
+			<AttachedAnnotation Disambiguator="34" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_REQUESTING_OFFICE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3041,7 +3559,7 @@ END]]></Value>
 					<References Name="[EA].[L_REQUESTING_OFFICE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="33" />
+			<AttachedAnnotation Disambiguator="36" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_REQUESTING_REGION]">
 			<Relationship Name="ColumnSpecifications">
@@ -3060,7 +3578,7 @@ END]]></Value>
 					<References Name="[EA].[L_REQUESTING_REGION]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="34" />
+			<AttachedAnnotation Disambiguator="37" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_SERVICE_TYPE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3079,7 +3597,7 @@ END]]></Value>
 					<References Name="[EA].[L_SERVICE_TYPE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="35" />
+			<AttachedAnnotation Disambiguator="38" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_SERVICE_TYPE_CATEGORY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3098,7 +3616,7 @@ END]]></Value>
 					<References Name="[EA].[L_SERVICE_TYPE_CATEGORY]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="36" />
+			<AttachedAnnotation Disambiguator="39" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_SERVICES]">
 			<Relationship Name="ColumnSpecifications">
@@ -3117,7 +3635,7 @@ END]]></Value>
 					<References Name="[EA].[L_SERVICES]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="37" />
+			<AttachedAnnotation Disambiguator="40" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_STATE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3136,7 +3654,7 @@ END]]></Value>
 					<References Name="[EA].[L_STATE]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="38" />
+			<AttachedAnnotation Disambiguator="41" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_SUB_SERVICES]">
 			<Relationship Name="ColumnSpecifications">
@@ -3155,7 +3673,7 @@ END]]></Value>
 					<References Name="[EA].[L_SUB_SERVICES]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="39" />
+			<AttachedAnnotation Disambiguator="42" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_USR_STATUS]">
 			<Relationship Name="ColumnSpecifications">
@@ -3174,7 +3692,7 @@ END]]></Value>
 					<References Name="[EA].[L_USR_STATUS]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="40" />
+			<AttachedAnnotation Disambiguator="43" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_REQUESTING_DIRECTOR_DEPARTMENT]">
 			<Relationship Name="ColumnSpecifications">
@@ -3193,7 +3711,7 @@ END]]></Value>
 					<References Name="[EA].[L_REQUESTING_DIRECTOR_DEPARTMENT]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="32" />
+			<AttachedAnnotation Disambiguator="35" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR]">
 			<Relationship Name="ColumnSpecifications">
@@ -3212,7 +3730,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="41" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="44" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_CATEGORY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3231,7 +3749,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_CATEGORY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="42" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="45" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_CERTAINTY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3250,7 +3768,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_CERTAINTY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="43" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="46" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_CHANNEL]">
 			<Relationship Name="ColumnSpecifications">
@@ -3269,7 +3787,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_CHANNEL]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="44" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="47" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_RECIPENT]">
 			<Relationship Name="ColumnSpecifications">
@@ -3288,7 +3806,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_RECIPENT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="45" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="48" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_SEVERITY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3307,7 +3825,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_SEVERITY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="46" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="49" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_URGENCY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3326,7 +3844,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_URGENCY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="47" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="50" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_WARNE_TYPE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3345,7 +3863,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_WARNE_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="48" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="51" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ATTACHMENTS]">
 			<Relationship Name="ColumnSpecifications">
@@ -3364,7 +3882,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ATTACHMENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="49" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="52" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_AUTHOR]">
 			<Relationship Name="ColumnSpecifications">
@@ -3383,7 +3901,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_AUTHOR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="50" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="53" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_HIST]">
 			<Relationship Name="ColumnSpecifications">
@@ -3402,7 +3920,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_HIST]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="51" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="54" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_LOCATION]">
 			<Relationship Name="ColumnSpecifications">
@@ -3421,7 +3939,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_LOCATION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="52" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="55" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_OPERATION_MANAGER]">
 			<Relationship Name="ColumnSpecifications">
@@ -3440,7 +3958,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_OPERATION_MANAGER]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="53" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="56" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_PURPOSE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3459,7 +3977,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_PURPOSE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="54" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="57" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_RECIPIENTS]">
 			<Relationship Name="ColumnSpecifications">
@@ -3478,7 +3996,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_RECIPIENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="55" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="58" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_SERVICE_TYPE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3497,7 +4015,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_SERVICE_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="56" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="59" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR]">
 			<Property Name="IsChangeTrackingOn" Value="True" />
@@ -3920,9 +4438,9 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="41" />
-			<AttachedAnnotation Disambiguator="18" />
-			<AttachedAnnotation Disambiguator="26" />
+			<AttachedAnnotation Disambiguator="44" />
+			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="29" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_CATEGORY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4058,8 +4576,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="42" />
-			<AttachedAnnotation Disambiguator="9" />
+			<AttachedAnnotation Disambiguator="45" />
+			<AttachedAnnotation Disambiguator="12" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_CERTAINTY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4195,8 +4713,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="43" />
-			<AttachedAnnotation Disambiguator="10" />
+			<AttachedAnnotation Disambiguator="46" />
+			<AttachedAnnotation Disambiguator="13" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_CHANNEL]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4332,8 +4850,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="44" />
-			<AttachedAnnotation Disambiguator="11" />
+			<AttachedAnnotation Disambiguator="47" />
+			<AttachedAnnotation Disambiguator="14" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_RECIPENT]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4532,8 +5050,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="45" />
-			<AttachedAnnotation Disambiguator="12" />
+			<AttachedAnnotation Disambiguator="48" />
+			<AttachedAnnotation Disambiguator="15" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_SEVERITY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4669,8 +5187,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="46" />
-			<AttachedAnnotation Disambiguator="13" />
+			<AttachedAnnotation Disambiguator="49" />
+			<AttachedAnnotation Disambiguator="16" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_URGENCY]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4806,8 +5324,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="47" />
-			<AttachedAnnotation Disambiguator="14" />
+			<AttachedAnnotation Disambiguator="50" />
+			<AttachedAnnotation Disambiguator="17" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_WARNE_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -4943,8 +5461,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="48" />
-			<AttachedAnnotation Disambiguator="15" />
+			<AttachedAnnotation Disambiguator="51" />
+			<AttachedAnnotation Disambiguator="18" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ATTACHMENTS]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -5096,8 +5614,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="49" />
-			<AttachedAnnotation Disambiguator="16" />
+			<AttachedAnnotation Disambiguator="52" />
+			<AttachedAnnotation Disambiguator="19" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_AUTHOR]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -5279,8 +5797,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="50" />
-			<AttachedAnnotation Disambiguator="17" />
+			<AttachedAnnotation Disambiguator="53" />
+			<AttachedAnnotation Disambiguator="20" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_HIST]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -5726,7 +6244,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="51" />
+			<AttachedAnnotation Disambiguator="54" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_LOCATION]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -6070,9 +6588,9 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="52" />
-			<AttachedAnnotation Disambiguator="19" />
-			<AttachedAnnotation Disambiguator="20" />
+			<AttachedAnnotation Disambiguator="55" />
+			<AttachedAnnotation Disambiguator="22" />
+			<AttachedAnnotation Disambiguator="23" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_OPERATION_MANAGER]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -6269,9 +6787,9 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="53" />
-			<AttachedAnnotation Disambiguator="21" />
-			<AttachedAnnotation Disambiguator="22" />
+			<AttachedAnnotation Disambiguator="56" />
+			<AttachedAnnotation Disambiguator="24" />
+			<AttachedAnnotation Disambiguator="25" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_PURPOSE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -6407,8 +6925,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="54" />
-			<AttachedAnnotation Disambiguator="23" />
+			<AttachedAnnotation Disambiguator="57" />
+			<AttachedAnnotation Disambiguator="26" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_RECIPIENTS]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -6544,8 +7062,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="55" />
-			<AttachedAnnotation Disambiguator="24" />
+			<AttachedAnnotation Disambiguator="58" />
+			<AttachedAnnotation Disambiguator="27" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_SERVICE_TYPE]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -6695,8 +7213,8 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="56" />
-			<AttachedAnnotation Disambiguator="25" />
+			<AttachedAnnotation Disambiguator="59" />
+			<AttachedAnnotation Disambiguator="28" />
 		</Element>
 		<Element Type="SqlDmlTrigger" Name="[EA].[trgUSRDataCHANGE]">
 			<Property Name="IsInsertTrigger" Value="True" />
@@ -7402,6 +7920,150 @@ IF UPDATE(REVIEWER_ID)
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="&#xD;&#xA;  CREATE TRIGGER [EA].[trgUSRDataCHANGE]&#xD;&#xA;  on [EA].[T_USR]&#xD;&#xA;  AFTER Insert,Update&#xD;&#xA;  NOT FOR REPLICATION &#xD;&#xA;  AS" />
 			</Annotation>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[applied_by].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'The executing user at the time of deployment (populated using the SYSTEM_USER function).']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[applied_by]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[complete_dt].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'The date/time that the migration finished executing. This value is populated using the SYSDATETIME function.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[complete_dt]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[deployed].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'This column contains a number of potential states:
+
+0 - Marked As Deployed: The migration was not executed.
+1- Deployed: The migration was executed successfully.
+2- Imported: The migration was generated by importing from this DB.
+
+"Marked As Deployed" and "Imported" are similar in that the migration was not executed on this database; it was was only marked as such to prevent it from executing during subsequent deployments.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[deployed]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[migration_id].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'The unique identifier of a migration script file. This value is stored within the <Migration /> Xml fragment within the header of the file itself.
+
+Note that it is possible for this value to repeat in the [__MigrationLog] table. In the case of programmable object scripts, a record will be inserted with a particular ID each time a change is made to the source file and subsequently deployed.
+
+In the case of a migration, you may see the same [migration_id] repeated, but only in the scenario where the "Mark As Deployed" button/command has been run.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[migration_id]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[package_version].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'If you have enabled SQLCMD Packaging in your SQL Change Automation project, or if you are using Octopus Deploy, this will be the version number that your database package was stamped with at build-time.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[package_version]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[release_version].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'If you are using Octopus Deploy, you can use the value in this column to look-up which release was responsible for deploying this migration.
+If deploying via PowerShell, set the $ReleaseVersion variable to populate this column.
+If deploying via Visual Studio, this column will always be NULL.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[release_version]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[script_checksum].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'A SHA256 representation of the migration script file at the time of build.  This value is used to determine whether a migration has been changed since it was deployed. In the case of a programmable object script, a different checksum will cause the migration to be redeployed.
+Note: if any variables have been specified as part of a deployment, this will not affect the checksum value.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[script_checksum]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[script_filename].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'The name of the migration script file on disk, at the time of build.
+If Semantic Versioning has been enabled, then this value will contain the full relative path from the root of the project folder. If it is not enabled, then it will simply contain the filename itself.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[script_filename]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[sequence_no].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'An auto-seeded numeric identifier that can be used to determine the order in which migrations were deployed.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[sequence_no]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[__MigrationLog].[version].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'The semantic version that this migration was created under. In SQL Change Automation projects, a folder can be given a version number, e.g. 1.0.0, and one or more migration scripts can be stored within that folder to provide logical grouping of related database changes.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog].[version]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlTableBase].[dbo].[__MigrationLog].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'This table is required by SQL Change Automation projects to keep track of which migrations have been executed during deployment. Please do not alter or remove this table from the database.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLog]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlTableBase].[dbo].[__SchemaSnapshot].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'This table is used by SQL Change Automation projects to store a snapshot of the schema at the time of the last deployment. Please do not alter or remove this table from the database.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__SchemaSnapshot]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlView].[dbo].[__MigrationLogCurrent].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'This view is required by SQL Change Automation projects to determine whether a migration should be executed during a deployment. The view lists the most recent [__MigrationLog] entry for a given [migration_id], which is needed to determine whether a particular programmable object script needs to be (re)executed: a non-matching checksum on the current [__MigrationLog] entry will trigger the execution of a programmable object script. Please do not alter or remove this table from the database.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[__MigrationLogCurrent]" />
+				</Entry>
+			</Relationship>
 		</Element>
 	</Model>
 </DataSchemaModel>

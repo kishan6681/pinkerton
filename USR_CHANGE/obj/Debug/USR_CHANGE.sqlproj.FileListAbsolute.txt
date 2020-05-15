@@ -1,0 +1,11 @@
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\bin\Debug\
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\bin\Debug\USR_CHANGE_DeployPackage.ps1
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\bin\Debug\USR_CHANGE_Provisioning.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\bin\Debug\USR_CHANGE.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\bin\Debug\USR_CHANGE.dll
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\bin\Debug\USR_CHANGE.pdb
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\obj\Debug\USR_CHANGE.sqlprojAssemblyReference.cache
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\obj\Debug\USR_CHANGE_Provisioning.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\obj\Debug\USR_CHANGE.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\obj\Debug\USR_CHANGE.dll
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\obj\Debug\USR_CHANGE.pdb
