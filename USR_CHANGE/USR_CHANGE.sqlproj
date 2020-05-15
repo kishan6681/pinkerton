@@ -35,8 +35,8 @@
     <EvaluateExecutionOrderOnImport>True</EvaluateExecutionOrderOnImport>
     <Provisioner>CustomScripts</Provisioner>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <IncludeObjectsInDataSync>Table=[EA].[T_USR]</IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
+    <IncludeObjectsInDataSync>Table=[EA].[T_USR]</IncludeObjectsInDataSync>
   </PropertyGroup>
   <!-- SQL CHANGE AUTOMATION OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -190,7 +190,6 @@
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\001_20200515-2145_mkomaravolu.sql" />
     <None Include="Programmable Objects\dbo\Functions\fn_diagramobjects.sql" />
     <None Include="Programmable Objects\dbo\Stored Procedures\spGetChangeTracking.sql" />
     <None Include="Schema-Model\EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
@@ -225,5 +224,8 @@
     <None Include="Schema-Model\EA\Tables\T_USR_RECIPIENTS.sql" />
     <None Include="Schema-Model\EA\Tables\T_USR_SERVICE_TYPE.sql" />
     <None Include="Schema-Model\Security\Schemas\EA.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\001_20200515-2200_mkomaravolu.sql" />
   </ItemGroup>
 </Project>
