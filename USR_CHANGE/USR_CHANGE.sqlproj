@@ -30,7 +30,7 @@
     <DeployChangesImportSchemaFolders>True</DeployChangesImportSchemaFolders>
     <PreDeploymentSubFolder>Pre-Deployment</PreDeploymentSubFolder>
     <PostDeploymentSubFolder>Post-Deployment</PostDeploymentSubFolder>
-    <GenerateSqlPackage>True</GenerateSqlPackage>
+    <GenerateSqlPackage>False</GenerateSqlPackage>
     <MigrationOrdering>FilePath</MigrationOrdering>
     <EvaluateExecutionOrderOnImport>True</EvaluateExecutionOrderOnImport>
     <Provisioner>CustomScripts</Provisioner>
@@ -224,5 +224,8 @@
     <None Include="Schema-Model\EA\Tables\T_USR_RECIPIENTS.sql" />
     <None Include="Schema-Model\EA\Tables\T_USR_SERVICE_TYPE.sql" />
     <None Include="Schema-Model\Security\Schemas\EA.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\001_20200515-2257_mkomaravolu.sql" />
   </ItemGroup>
 </Project>
