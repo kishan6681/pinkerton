@@ -3,5 +3,7 @@
   <PropertyGroup>
     <TargetDatabase>USR_DEV</TargetDatabase>
     <TargetConnectionString>Data Source=CBR-LAP-DEL2715\SQLEXPRESS;Initial Catalog=USR_DEV;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
+    <StartupScript>(Blank)</StartupScript>
+    <StartAction>StartNone</StartAction>
   </PropertyGroup>
 </Project>
