@@ -226,6 +226,6 @@
     <None Include="Schema-Model\Security\Schemas\EA.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\001_20200515-2215_mkomaravolu.sql" />
+    <None Include="Migrations\001_20200515-2234_mkomaravolu.sql" />
   </ItemGroup>
 </Project>
