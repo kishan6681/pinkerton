@@ -776,54 +776,26 @@ END]]></Value>
 				<Entry>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_OPERATION]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_VERSION]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_COLUMNS]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_CREATION_VERSION]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_CONTEXT]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_VERSION]" />
-				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
 				<Entry>
 					<References Name="[EA].[T_USR].[USR_ID]" />
 				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[USR_ID]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_OPERATION]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_VERSION]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_COLUMNS]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_CONTEXT]" />
-				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_CREATION_VERSION]" />
-				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[varchar]" />
 				</Entry>
-				<Entry>
-					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_COLUMNS]" />
-				</Entry>
+				<Entry />
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[varbinary]" />
 				</Entry>
@@ -3068,127 +3040,6 @@ END]]></Value>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="40" />
 		</Element>
-		<Element Type="SqlTable" Name="[EA].[L_STATE]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="Columns">
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[STATE_ID]">
-						<Property Name="IsNullable" Value="False" />
-						<Property Name="IsIdentity" Value="True" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[STATE_NAME]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="255" />
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[varchar]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[IS_DELETED]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[bit]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[CREATE_DATE]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[datetime]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[CREATE_LOGIN_ID]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="255" />
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[varchar]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[UPDATE_DATE]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[datetime]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[EA].[L_STATE].[UPDATE_LOGIN_ID]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="255" />
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[varchar]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
-				<Entry>
-					<References Name="[EA]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="41" />
-		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_SUB_SERVICES]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
@@ -3323,7 +3174,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="42" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="41" />
 			<AttachedAnnotation Disambiguator="11" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[L_USR_STATUS]">
@@ -3445,7 +3296,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="43" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="42" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_CLIENT]">
 			<Relationship Name="ColumnSpecifications">
@@ -3637,25 +3488,6 @@ END]]></Value>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="40" />
 		</Element>
-		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_STATE]">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[EA].[L_STATE].[STATE_ID]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[EA].[L_STATE]" />
-				</Entry>
-			</Relationship>
-			<AttachedAnnotation Disambiguator="41" />
-		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_SUB_SERVICES]">
 			<Relationship Name="ColumnSpecifications">
 				<Entry>
@@ -3673,7 +3505,7 @@ END]]></Value>
 					<References Name="[EA].[L_SUB_SERVICES]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="42" />
+			<AttachedAnnotation Disambiguator="41" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_L_USR_STATUS]">
 			<Relationship Name="ColumnSpecifications">
@@ -3692,7 +3524,7 @@ END]]></Value>
 					<References Name="[EA].[L_USR_STATUS]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="43" />
+			<AttachedAnnotation Disambiguator="42" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_REQUESTING_DIRECTOR_DEPARTMENT]">
 			<Relationship Name="ColumnSpecifications">
@@ -3730,7 +3562,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="44" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="43" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_CATEGORY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3749,7 +3581,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_CATEGORY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="45" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="44" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_CERTAINTY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3768,7 +3600,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_CERTAINTY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="46" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="45" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_CHANNEL]">
 			<Relationship Name="ColumnSpecifications">
@@ -3787,7 +3619,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_CHANNEL]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="47" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="46" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_RECIPENT]">
 			<Relationship Name="ColumnSpecifications">
@@ -3806,7 +3638,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_RECIPENT]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="48" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="47" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_SEVERITY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3825,7 +3657,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_SEVERITY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="49" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="48" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_URGENCY]">
 			<Relationship Name="ColumnSpecifications">
@@ -3844,7 +3676,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_URGENCY]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="50" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="49" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ALERT_WARNE_TYPE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3863,7 +3695,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ALERT_WARNE_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="51" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="50" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_ATTACHMENTS]">
 			<Relationship Name="ColumnSpecifications">
@@ -3882,7 +3714,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_ATTACHMENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="52" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="51" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_AUTHOR]">
 			<Relationship Name="ColumnSpecifications">
@@ -3901,7 +3733,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_AUTHOR]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="53" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="52" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_HIST]">
 			<Relationship Name="ColumnSpecifications">
@@ -3920,7 +3752,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_HIST]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="54" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="53" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_LOCATION]">
 			<Relationship Name="ColumnSpecifications">
@@ -3939,7 +3771,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_LOCATION]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="55" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="54" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_OPERATION_MANAGER]">
 			<Relationship Name="ColumnSpecifications">
@@ -3958,7 +3790,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_OPERATION_MANAGER]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="56" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="55" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_PURPOSE]">
 			<Relationship Name="ColumnSpecifications">
@@ -3977,7 +3809,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_PURPOSE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="57" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="56" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_RECIPIENTS]">
 			<Relationship Name="ColumnSpecifications">
@@ -3996,7 +3828,7 @@ END]]></Value>
 					<References Name="[EA].[T_USR_RECIPIENTS]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="58" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="57" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[EA].[PK_T_USR_SERVICE_TYPE]">
 			<Relationship Name="ColumnSpecifications">
@@ -4015,11 +3847,9 @@ END]]></Value>
 					<References Name="[EA].[T_USR_SERVICE_TYPE]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="59" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="58" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR]">
-			<Property Name="IsChangeTrackingOn" Value="True" />
-			<Property Name="IsTrackColumnsUpdatedOn" Value="True" />
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
 				<Entry>
@@ -4407,38 +4237,12 @@ END]]></Value>
 					</Element>
 				</Entry>
 			</Relationship>
-			<Relationship Name="DynamicObjectForChangeTable">
-				<Entry>
-					<Element Type="SqlDynamicColumnSource" Name="[EA].[T_USR].[CT].[CT]">
-						<Relationship Name="Columns">
-							<Entry>
-								<Element Type="SqlComputedColumn" Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_VERSION]" />
-							</Entry>
-							<Entry>
-								<Element Type="SqlComputedColumn" Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_CREATION_VERSION]" />
-							</Entry>
-							<Entry>
-								<Element Type="SqlComputedColumn" Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_OPERATION]" />
-							</Entry>
-							<Entry>
-								<Element Type="SqlComputedColumn" Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_COLUMNS]" />
-							</Entry>
-							<Entry>
-								<Element Type="SqlComputedColumn" Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_CONTEXT]" />
-							</Entry>
-							<Entry>
-								<Element Type="SqlComputedColumn" Name="[EA].[T_USR].[CT].[CT].[USR_ID]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="44" />
+			<AttachedAnnotation Disambiguator="43" />
 			<AttachedAnnotation Disambiguator="21" />
 			<AttachedAnnotation Disambiguator="29" />
 		</Element>
@@ -4576,7 +4380,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="45" />
+			<AttachedAnnotation Disambiguator="44" />
 			<AttachedAnnotation Disambiguator="12" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_CERTAINTY]">
@@ -4713,7 +4517,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="46" />
+			<AttachedAnnotation Disambiguator="45" />
 			<AttachedAnnotation Disambiguator="13" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_CHANNEL]">
@@ -4850,7 +4654,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="47" />
+			<AttachedAnnotation Disambiguator="46" />
 			<AttachedAnnotation Disambiguator="14" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_RECIPENT]">
@@ -5050,7 +4854,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="48" />
+			<AttachedAnnotation Disambiguator="47" />
 			<AttachedAnnotation Disambiguator="15" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_SEVERITY]">
@@ -5187,7 +4991,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="49" />
+			<AttachedAnnotation Disambiguator="48" />
 			<AttachedAnnotation Disambiguator="16" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_URGENCY]">
@@ -5324,7 +5128,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="50" />
+			<AttachedAnnotation Disambiguator="49" />
 			<AttachedAnnotation Disambiguator="17" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ALERT_WARNE_TYPE]">
@@ -5461,7 +5265,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="51" />
+			<AttachedAnnotation Disambiguator="50" />
 			<AttachedAnnotation Disambiguator="18" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_ATTACHMENTS]">
@@ -5614,7 +5418,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="52" />
+			<AttachedAnnotation Disambiguator="51" />
 			<AttachedAnnotation Disambiguator="19" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_AUTHOR]">
@@ -5797,7 +5601,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="53" />
+			<AttachedAnnotation Disambiguator="52" />
 			<AttachedAnnotation Disambiguator="20" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_HIST]">
@@ -6244,7 +6048,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="54" />
+			<AttachedAnnotation Disambiguator="53" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_LOCATION]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -6588,7 +6392,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="55" />
+			<AttachedAnnotation Disambiguator="54" />
 			<AttachedAnnotation Disambiguator="22" />
 			<AttachedAnnotation Disambiguator="23" />
 		</Element>
@@ -6787,7 +6591,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="56" />
+			<AttachedAnnotation Disambiguator="55" />
 			<AttachedAnnotation Disambiguator="24" />
 			<AttachedAnnotation Disambiguator="25" />
 		</Element>
@@ -6925,7 +6729,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="57" />
+			<AttachedAnnotation Disambiguator="56" />
 			<AttachedAnnotation Disambiguator="26" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_RECIPIENTS]">
@@ -7062,7 +6866,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="58" />
+			<AttachedAnnotation Disambiguator="57" />
 			<AttachedAnnotation Disambiguator="27" />
 		</Element>
 		<Element Type="SqlTable" Name="[EA].[T_USR_SERVICE_TYPE]">
@@ -7213,7 +7017,7 @@ END]]></Value>
 					<References Name="[EA]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="59" />
+			<AttachedAnnotation Disambiguator="58" />
 			<AttachedAnnotation Disambiguator="28" />
 		</Element>
 		<Element Type="SqlDmlTrigger" Name="[EA].[trgUSRDataCHANGE]">
@@ -7913,10 +7717,10 @@ IF UPDATE(REVIEWER_ID)
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Offset" Value="1790" />
+				<Property Name="Offset" Value="1712" />
 				<Property Name="CreateOffset" Value="4" />
 				<Property Name="Length" Value="13142" />
-				<Property Name="StartLine" Value="40" />
+				<Property Name="StartLine" Value="42" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="&#xD;&#xA;  CREATE TRIGGER [EA].[trgUSRDataCHANGE]&#xD;&#xA;  on [EA].[T_USR]&#xD;&#xA;  AFTER Insert,Update&#xD;&#xA;  NOT FOR REPLICATION &#xD;&#xA;  AS" />
 			</Annotation>
