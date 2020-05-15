@@ -30,7 +30,7 @@
     <DeployChangesImportSchemaFolders>True</DeployChangesImportSchemaFolders>
     <PreDeploymentSubFolder>Pre-Deployment</PreDeploymentSubFolder>
     <PostDeploymentSubFolder>Post-Deployment</PostDeploymentSubFolder>
-    <GenerateSqlPackage>False</GenerateSqlPackage>
+    <GenerateSqlPackage>True</GenerateSqlPackage>
     <MigrationOrdering>FilePath</MigrationOrdering>
     <EvaluateExecutionOrderOnImport>True</EvaluateExecutionOrderOnImport>
     <Provisioner>CustomScripts</Provisioner>

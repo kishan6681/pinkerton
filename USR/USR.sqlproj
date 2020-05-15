@@ -97,7 +97,6 @@
     <Build Include="EA\Tables\T_USR_PURPOSE.sql" />
     <Build Include="EA\Tables\T_USR_RECIPIENTS.sql" />
     <Build Include="EA\Tables\T_USR_SERVICE_TYPE.sql" />
-    <Build Include="EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
     <Build Include="dbo\Functions\fn_diagramobjects.sql" />
     <Build Include="Security\EA.sql" />
     <Build Include="dbo\Stored Procedures\spGetChangeTracking.sql" />
