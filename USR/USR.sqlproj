@@ -68,7 +68,6 @@
     <Folder Include="dbo\Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="EA\Tables\T_USR_OPERATION_MANAGER.sql" />
     <Build Include="EA\Tables\L_CLIENT.sql" />
     <Build Include="EA\Tables\L_CLIENT_REQUESTING_OFFICE.sql" />
     <Build Include="EA\Tables\L_COUNTRY.sql" />
@@ -92,7 +91,6 @@
     <Build Include="EA\Tables\T_USR_ALERT_WARNE_TYPE.sql" />
     <Build Include="EA\Tables\T_USR_ATTACHMENTS.sql" />
     <Build Include="EA\Tables\T_USR_AUTHOR.sql" />
-    <Build Include="EA\Tables\T_USR_HIST.sql" />
     <Build Include="EA\Tables\T_USR_LOCATION.sql" />
     <Build Include="EA\Tables\T_USR_PURPOSE.sql" />
     <Build Include="EA\Tables\T_USR_RECIPIENTS.sql" />
@@ -100,9 +98,14 @@
     <Build Include="dbo\Functions\fn_diagramobjects.sql" />
     <Build Include="Security\EA.sql" />
     <Build Include="dbo\Stored Procedures\spGetChangeTracking.sql" />
-    <Build Include="dbo\Tables\__SchemaSnapshot.sql" />
-    <Build Include="dbo\Tables\__MigrationLog.sql" />
-    <Build Include="dbo\Views\__MigrationLogCurrent.sql" />
+    <Build Include="EA\Tables\T_USR_VERSION_JSON.sql" />
+    <Build Include="EA\Tables\T_USR_ASSET_SOS_DETAILS.sql" />
+    <Build Include="EA\Tables\T_USR_ASSET_NOTIFICATION.sql" />
+    <Build Include="EA\Tables\T_USR_ASSET.sql" />
+    <Build Include="EA\Tables\L_USER_TYPE.sql" />
+    <Build Include="EA\Tables\L_GROUP.sql" />
+    <Build Include="dbo\Tables\sysdiagrams.sql" />
+    <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="USR.refactorlog" />

@@ -36,7 +36,6 @@
     <Provisioner>CustomScripts</Provisioner>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
-    <IncludeObjectsInDataSync>Table=[EA].[T_USR]</IncludeObjectsInDataSync>
   </PropertyGroup>
   <!-- SQL CHANGE AUTOMATION OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -229,6 +228,9 @@
     <None Include="Migrations\001_20200515-2257_mkomaravolu.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\002_20200515-2304_mkomaravolu.sql" />
+    <None Include="Migrations\002_20200518-0055_mkomaravolu.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\003_20200518-0102_mkomaravolu.sql" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,8 @@
+﻿-- <Migration ID="ace31378-49d1-4b87-a266-09dfcf016eae" />
+GO
+
+PRINT N'Altering [EA].[T_USR]'
+GO
+ALTER TABLE [EA].[T_USR] DROP
+COLUMN [REQUESTING_DIRECTORY_ID]
+GO
