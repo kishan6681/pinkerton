@@ -231,4 +231,7 @@
     <None Include="Schema-Model\EA\Tables\T_USR_VERSION_JSON.sql" />
     <None Include="Schema-Model\Security\Schemas\EA.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\001_20200518-1259_mkomaravolu.sql" />
+  </ItemGroup>
 </Project>
