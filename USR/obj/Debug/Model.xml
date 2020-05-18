@@ -835,15 +835,14 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK(COLUMNPROPERTY(OBJECT_ID('USR_DEV.EA.T_USR'),
 'USR_ATTACHMENTS_ID', 'ColumnId'), SYS_CHANGE_COLUMNS) AS USR_ATTACHMENTS_ID
 from CHANGETABLE (CHANGES EA.T_USR,@LAST_SYNC_VERSION) ct
 left outer join EA.T_USR TU on TU.USR_ID= CT.USR_ID
---WHERE CT.SYS_CHANGE_CONTEXT <> 'OK'
 ORDER BY SYS_CHANGE_VERSION DESC
 
-/*BEGIN TRAN
+BEGIN TRAN
     DECLARE @CONTEXT VARBINARY(100)
 	SET @CONTEXT = CONVERT( VARBINARY,'ServerChange-' + CONVERT(VARCHAR,GETUTCDATE(),112));	
 	WITH CHANGE_TRACKING_CONTEXT( @CONTEXT)
 	UPDATE EA.T_USR SET UPDATE_LOGIN_ID=UPDATE_LOGIN_ID;
-COMMIT TRAN */
+COMMIT TRAN 
 END]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -853,6 +852,9 @@ END]]></Value>
 				</Entry>
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[bigint]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varbinary]" />
 				</Entry>
 				<Entry>
 					<References Name="[EA].[T_USR]" />
@@ -905,6 +907,15 @@ END]]></Value>
 				<Entry>
 					<References Name="[EA].[T_USR].[CT].[CT].[SYS_CHANGE_COLUMNS]" />
 				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varbinary]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[EA].[T_USR].[UPDATE_LOGIN_ID]" />
+				</Entry>
 			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
@@ -913,7 +924,7 @@ END]]></Value>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
 				<Property Name="CreateOffset" Value="243" />
-				<Property Name="Length" Value="5733" />
+				<Property Name="Length" Value="5690" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="-- Batch submitted through debugger: spGetChangeTracking.sql|8|0|C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_C\USR_C\Programmable Objects\dbo\Stored Procedures\spGetChangeTracking.sql&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[spGetChangeTracking]&#xD;&#xA;&#x9;AS" />
