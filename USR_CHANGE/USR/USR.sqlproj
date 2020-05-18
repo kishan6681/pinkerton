@@ -180,6 +180,14 @@
     <Folder Include="Schema-Model\EA\Tables\" />
     <Folder Include="Schema-Model\Security\" />
     <Folder Include="Schema-Model\Security\Schemas\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="EA\" />
+    <Folder Include="EA\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Provisioning\CreateDatabase.sql" />
@@ -230,5 +238,42 @@
     <None Include="Schema-Model\EA\Tables\T_USR_SERVICE_TYPE.sql" />
     <None Include="Schema-Model\EA\Tables\T_USR_VERSION_JSON.sql" />
     <None Include="Schema-Model\Security\Schemas\EA.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="EA\Tables\EA.T_USR_SERVICE_TYPE.sql" />
+    <Build Include="EA\Tables\EA.T_USR_RECIPIENTS.sql" />
+    <Build Include="EA\Tables\EA.T_USR_PURPOSE.sql" />
+    <Build Include="EA\Tables\EA.T_USR_LOCATION.sql" />
+    <Build Include="EA\Tables\EA.T_USR_AUTHOR.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ATTACHMENTS.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ASSET_SOS_DETAILS.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ASSET_NOTIFICATION.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ASSET.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_WARNE_TYPE.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_URGENCY.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_SEVERITY.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_RECIPENT.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_CHANNEL.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_CERTAINTY.sql" />
+    <Build Include="EA\Tables\EA.T_USR_ALERT_CATEGORY.sql" />
+    <Build Include="EA\Tables\EA.T_USR.sql" />
+    <Build Include="EA\Tables\EA.L_USR_STATUS.sql" />
+    <Build Include="EA\Tables\EA.L_USER_TYPE.sql" />
+    <Build Include="EA\Tables\EA.L_SUB_SERVICES.sql" />
+    <Build Include="EA\Tables\EA.L_SERVICES.sql" />
+    <Build Include="EA\Tables\EA.L_SERVICE_TYPE_CATEGORY.sql" />
+    <Build Include="EA\Tables\EA.L_SERVICE_TYPE.sql" />
+    <Build Include="EA\Tables\EA.L_REQUESTING_REGION.sql" />
+    <Build Include="EA\Tables\EA.L_REQUESTING_OFFICE.sql" />
+    <Build Include="EA\Tables\EA.L_REQUESTING_DIRECTOR_DEPARTMENT.sql" />
+    <Build Include="EA\Tables\EA.L_MASTER_VALUE.sql" />
+    <Build Include="EA\Tables\EA.L_MASTER_TYPE.sql" />
+    <Build Include="EA\Tables\EA.L_GROUP.sql" />
+    <Build Include="EA\Tables\EA.L_COUNTRY.sql" />
+    <Build Include="EA\Tables\EA.L_CLIENT_REQUESTING_OFFICE.sql" />
+    <Build Include="EA\Tables\EA.L_CLIENT.sql" />
+    <Build Include="dbo\Functions\dbo.fn_diagramobjects.sql" />
+    <Build Include="dbo\Stored Procedures\dbo.spGetChangeTracking.sql" />
+    <Build Include="Security\EA.sql" />
   </ItemGroup>
 </Project>
