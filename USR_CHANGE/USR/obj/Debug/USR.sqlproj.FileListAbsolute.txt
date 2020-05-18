@@ -1,0 +1,10 @@
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\bin\Debug\
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\bin\Debug\USR_DeployPackage.ps1
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\bin\Debug\USR_Provisioning.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\bin\Debug\USR.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\bin\Debug\USR.dll
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\bin\Debug\USR.pdb
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\obj\Debug\USR_Provisioning.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\obj\Debug\USR.sql
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\obj\Debug\USR.dll
+C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_CHANGE\USR\obj\Debug\USR.pdb
