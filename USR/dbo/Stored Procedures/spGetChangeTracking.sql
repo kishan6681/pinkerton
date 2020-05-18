@@ -1,4 +1,5 @@
-﻿
+﻿-- Batch submitted through debugger: spGetChangeTracking.sql|8|0|C:\Users\mkomaravolu\Desktop\Local-Pinkerton-DB\Source\SourceCode\Database\Test_local\pinkerton\USR_C\USR_C\Programmable Objects\dbo\Stored Procedures\spGetChangeTracking.sql
+
 CREATE PROCEDURE [dbo].[spGetChangeTracking]
 	AS
 BEGIN
@@ -77,7 +78,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK(COLUMNPROPERTY(OBJECT_ID('USR_DEV.EA.T_USR'),
 'USR_ATTACHMENTS_ID', 'ColumnId'), SYS_CHANGE_COLUMNS) AS USR_ATTACHMENTS_ID
 from CHANGETABLE (CHANGES EA.T_USR,@LAST_SYNC_VERSION) ct
 left outer join EA.T_USR TU on TU.USR_ID= CT.USR_ID
-where CT.SYS_CHANGE_CONTEXT <>'OK'
+WHERE CT.SYS_CHANGE_CONTEXT <> 'OK'
 ORDER BY SYS_CHANGE_VERSION DESC;
 
 BEGIN TRAN
