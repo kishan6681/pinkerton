@@ -189,7 +189,6 @@
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\001_20200518-1339_mkomaravolu.sql" />
     <None Include="Programmable Objects\dbo\Functions\fn_diagramobjects.sql" />
     <None Include="Programmable Objects\dbo\Stored Procedures\spGetChangeTracking.sql" />
     <None Include="Schema-Model\EA\Tables\L_CLIENT.sql" />
