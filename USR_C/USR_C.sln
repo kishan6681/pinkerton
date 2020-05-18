@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "USR_C", "USR_C\USR_C.sqlproj", "{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "USR", "..\USR\USR.sqlproj", "{92D33508-FC23-4867-AD64-1C5F9F0062E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB6A6DE9-EB0B-4D97-9B27-4342FA899DC3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{92D33508-FC23-4867-AD64-1C5F9F0062E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D33508-FC23-4867-AD64-1C5F9F0062E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D33508-FC23-4867-AD64-1C5F9F0062E3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92D33508-FC23-4867-AD64-1C5F9F0062E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D33508-FC23-4867-AD64-1C5F9F0062E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D33508-FC23-4867-AD64-1C5F9F0062E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6667B9A-9E19-4451-85C4-62934FD2DF74}
+	EndGlobalSection
+EndGlobal
